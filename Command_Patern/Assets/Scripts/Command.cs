@@ -28,6 +28,13 @@ public class PerformKick: Command
         anim.SetTrigger("isKicking");
     }
 }
+public class MoveForward: Command
+{
+    public override void Execute(Animator anim)
+    {
+        anim.SetTrigger("isWalking");
+    }
+}
 
 public class DoNothing: Command 
 {
