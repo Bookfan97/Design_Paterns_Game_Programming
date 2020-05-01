@@ -1,26 +1,31 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
-using UnityEngine.VFX;
 
-public class SpawnProxy : MonoBehaviour, IDeclareReferencedPrefabs, IConvertGameObjectToEntity
+public class SpawnProxy : MonoBehaviour,
+                            IDeclareReferencedPrefabs,
+                            IConvertGameObjectToEntity
 {
+
     public GameObject cube;
-    public int rows, columns;
-    public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+    public int rows;
+    public int cols;
+
+    public void DeclareReferencedPrefabs(List<GameObject> gameObjects)
+    {
+        gameObjects.Add(cube);
+    }
+
+    public void Convert(Entity entity, EntityManager dstManager,
+                             GameObjectConversionSystem conversionSystem)
     {
         var spawnerData = new Spawner
         {
             Prefab = conversionSystem.GetPrimaryEntity(cube),
             Erows = rows,
-            Ecols = columns
+            Ecols = cols
         };
         dstManager.AddComponentData(entity, spawnerData);
-    }
-
-    public void DeclareReferencedPrefabs(List<GameObject> gameObjects)
-    {
-        gameObjects.Add(cube);
     }
 }

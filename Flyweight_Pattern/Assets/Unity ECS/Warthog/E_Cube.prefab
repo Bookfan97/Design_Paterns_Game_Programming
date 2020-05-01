@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7930791402854892636}
   - component: {fileID: 7930791402854892637}
   - component: {fileID: 7930791402854892638}
-  - component: {fileID: 1525999205796647673}
+  - component: {fileID: 5931392496254720654}
   m_Layer: 0
   m_Name: E_Cube
   m_TagString: Untagged
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 0
---- !u!114 &1525999205796647673
+--- !u!114 &5931392496254720654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,6 +117,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7930791402854892639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63161f7ba75b2bc47a50f42083e6a5c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 170843063bf284ed89816538c18825bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class SpawnCar : MonoBehaviour
 {
-    public GameObject car, camera;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject car;
+    public GameObject camera;
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Vector3 pos = new Vector3(10, 10, 10);
             GameObject c = Instantiate(car, pos, Quaternion.identity);
